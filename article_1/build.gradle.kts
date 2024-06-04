@@ -5,18 +5,11 @@ plugins {
 
 android {
     namespace = "cdr.aricle_1"
+    compileSdk = 34
+
     defaultConfig {
-        applicationId = "cdr.article"
         minSdk = 24
-
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        vectorDrawables {
-            useSupportLibrary = true
-        }
     }
 
     buildTypes {
@@ -28,13 +21,10 @@ android {
             )
         }
     }
-
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-
-    kotlinOptions { jvmTarget = "17" }
     composeOptions { kotlinCompilerExtensionVersion = "1.4.3" }
     buildFeatures { compose = true }
     tasks.withType<Test> { useJUnitPlatform() }
