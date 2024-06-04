@@ -1,5 +1,6 @@
 rootProject.name = "article-unit-tests"
 include(":article-TestMobile")
+include(":article_1")
 
 pluginManagement {
     repositories {
