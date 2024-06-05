@@ -39,3 +39,4 @@ dependencyResolutionManagement {
         }
     }
 }
+include(":article_2")
