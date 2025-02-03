@@ -5,13 +5,11 @@ plugins {
     alias(libs.plugins.kotlin.compose)
 }
 
-
 android {
-    namespace = "cdr.article_testMobile"
+    namespace = "cdr.article_3"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "cdr.exchangerapp"
         minSdk = 24
 
         targetSdk = 35
@@ -19,8 +17,15 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        vectorDrawables {
-            useSupportLibrary = true
+    }
+
+    buildTypes {
+        release {
+            isMinifyEnabled = false
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
 
